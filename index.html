@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAMOS VENDER?</title>
+    <style>
+
+        h1{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 120px;
+        padding-right: 1250px;
+        border-top: 50px;
+        border-bottom: 150px;
+        margin-top: 350px;
+        }
+
+        h6{
+        font-size: 15px;
+        padding-top: 0px;
+        padding-left: 118px;
+        padding-right: 1473px;
+        border-top: 50px;
+        border-bottom: 120px;
+        margin-top: -25px;
+        }
+
+      .box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+      }
+
+      .buttons {
+        display: block;
+        width: 200px;
+        margin-left: 100px;
+      }
+
+      .button {
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 8px;
+        line-height: 20px;
+        list-style: none;
+        margin-top: -80px;
+        margin-right: 0px;
+        margin-bottom: -5px;
+        margin-left: -772px;
+        padding-top: -80px;
+        padding-bottom: -50px;
+        border-top: 50px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        text-align: center;
+        padding: 10px 15px;
+        border-style: none;
+      }
+
+      .button-1 {
+        background-color: #00298e;
+        color: #ffffff;
+        transition: color 100ms;
+        margin-right: 10px;
+      }
+
+      .button-1:hover {
+        background-color: #0a64ff;
+      }
+
+      .button-2 {
+        background-color: rgb(216, 216, 216);
+        color: #333333;
+        transition: all 500ms;
+        margin-top: 10px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        user-select: none;
+        z-index: 1000;
+      }
+
+      img{
+        padding-top: 0px;
+        padding-bottom: 105px;
+        padding-left: 0px;
+        padding-right: 105px;
+        margin-top: -364px;
+        margin-left: 530px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>VOCÊ VAI VENDER RETROVISOR DE CAMINHÃO DELIVERY HOJE?</h1>
+      <h6 style="margin: -35px 1px 0px 0px;">
+        <p>(TE DESAFIO A DIZER QUE NÃO KKK &#x1F60E;)</p>
+      </h6>
+      <div class="buttons">
+        <button class="button button-1" id="sim">Sim</button>
+        <button class="button button-2" id="nao">Não</button>
+      </div>
+    </div>
+
+    <img src="OptimusSegurandoPeça.png" alt="Robo Autobot Segurando Retrovisor">
+
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const naoButton = document.getElementById("nao");
+      const simButton = document.getElementById("sim");
+
+      simButton.addEventListener("click", function () {
+        var novaPagina = 'https://www.youtube.com/';
+        window.open(novaPagina, '_blank');
+      });
+
+      const handleNao = function () {
+        naoButton.style.position = "fixed";
+
+        const randTop =
+          Math.random() * (window.innerHeight - naoButton.offsetHeight);
+        const randLeft =
+          Math.random() * (window.innerWidth - naoButton.offsetWidth);
+
+        naoButton.style.top = randTop + "px";
+        naoButton.style.left = randLeft + "px";
+      };
+
+      naoButton.addEventListener("click", handleNao);
+      naoButton.addEventListener("mouseover", handleNao);
+    });
+  </script>
+</html>
