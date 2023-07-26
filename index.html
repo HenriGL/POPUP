@@ -1,112 +1,143 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VAMOS VENDER?!</title>
-        
+    <title>VAMOS VENDER?</title>
     <style>
-       body{
-        background-color: #2e247a;
+
+        h1{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 120px;
+        padding-right: 1250px;
+        border-top: 50px;
+        border-bottom: 150px;
+        margin-top: 350px;
+        }
+
+        h6{
+        font-size: 15px;
+        padding-top: 0px;
+        padding-left: 118px;
+        padding-right: 1473px;
+        border-top: 50px;
+        border-bottom: 120px;
+        margin-top: -25px;
+        }
+
+      .box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+      }
+
+      .buttons {
+        display: block;
+        width: 200px;
+        margin-left: 100px;
+      }
+
+      .button {
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 8px;
+        line-height: 20px;
+        list-style: none;
+        margin-top: -80px;
+        margin-right: 0px;
+        margin-bottom: -5px;
+        margin-left: -772px;
+        padding-top: -80px;
+        padding-bottom: -50px;
+        border-top: 50px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
         text-align: center;
-        margin-top: 30px;
-        width: auto;
-        height: auto;
-    
-    }
-        .painel{
-        padding-top: 20px;
-        margin: auto;
-        width: 500px;
-        height: 570px;
-        border-radius: 20px;
-        
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-    
-    h1{
-      margin-top: 10px;
-      margin-right: 20px;
-      margin-left: 20px;
-      font-size: 30px;
-      color: #00298e;
-    }
+        padding: 10px 15px;
+        border-style: none;
+      }
 
-    h5{
-        color: #ffffff;
-        font-size: 18px;
-        margin-top: 10px;
-    }
-    
-    #sim{
-        
-        width: 80px;
-        height: 60px;
-        border-radius: 10px;
+      .button-1 {
         background-color: #00298e;
-        color: bisque;
-        font-weight: bold;
-        font-size: 18px;
-        margin-left: -90px;
-        box-shadow: 0px 0px 10px 2px #00134273;
-        
-    }
-    #nao{
-        position: absolute;
-        width: 80px;
-        height: 60px;
-        border-radius: 10px;
-        background-color: #f07204;
-        color: bisque;
-        font-weight: bold;
-        font-size: 18px;
-        margin-left: 10px;
-        transition: 500ms;
-        box-shadow: 0px 0px 10px 2px #00134273;
-    }
+        color: #ffffff;
+        transition: color 100ms;
+        margin-right: 10px;
+      }
 
-    img{
-        margin: auto;
-    }
+      .button-1:hover {
+        background-color: #0a64ff;
+      }
 
-    picture > source{
-        margin: auto;
-    }
+      .button-2 {
+        background-color: rgb(216, 216, 216);
+        color: #333333;
+        transition: all 500ms;
+        margin-top: 10px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        user-select: none;
+        z-index: 1000;
+      }
+
+      img{
+        padding-top: 0px;
+        padding-bottom: 105px;
+        padding-left: 0px;
+        padding-right: 105px;
+        margin-top: -364px;
+        margin-left: 530px;
+      }
 
     </style>
-
-</head>
-<body>
-
-    <div class="painel">
-        <picture>
-            <source media="(min-width: 300px)" srcset="imgpop.pq.png">
-            <img src="imgpop.png" alt="">
-        </picture>
-        
-        <a href="https://autoglass365.sharepoint.com/sites/portalcorporativo" target="_blank">
-        <button id="sim"> SIM </button></a>
-        <button onmouseover= "fuja()" id="nao"> NÃO </button>
-
+  </head>
+  <body>
+    <div class="box">
+      <h1>VOCÊ VAI VENDER RETROVISOR DE CAMINHÃO DELIVERY HOJE?</h1>
+      <h6 style="margin: -35px 1px 0px 0px;">
+        <p>(TE DESAFIO A DIZER QUE NÃO KKK &#x1F60E;)</p>
+      </h6>
+      <div class="buttons">
+        <button class="button button-1" id="sim">Sim</button>
+        <button class="button button-2" id="nao">Não</button>
+      </div>
     </div>
-<script>
 
-    function fuja(){
-        var botaoNao = document.getElementById("nao")
-        
-        var larguraJanela = window.innerWidth;
-        var alturaJanela = window.innerHeight;
+    <img src="OptimusSegurandoPeça.png" alt="Robo Autobot Segurando Retrovisor">
 
-        var maxX = larguraJanela - botaoNao.offsetWidth;
-        var maxY = alturaJanela - botaoNao.offsetHeight;
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const naoButton = document.getElementById("nao");
+      const simButton = document.getElementById("sim");
 
-        var aleatorioX = Math.floor(Math.random() * maxX);
-        var aleatorioY = Math.floor(Math.random() * maxY);
+      simButton.addEventListener("click", function () {
+        var novaPagina = 'https://www.youtube.com/';
+        window.open(novaPagina, '_blank');
+      });
 
-        botaoNao.style.left = aleatorioX + "px";
-        botaoNao.style.top = aleatorioY + "px";
-    }
-</script>
+      const handleNao = function () {
+        naoButton.style.position = "fixed";
 
-</body>
+        const randTop =
+          Math.random() * (window.innerHeight - naoButton.offsetHeight);
+        const randLeft =
+          Math.random() * (window.innerWidth - naoButton.offsetWidth);
+
+        naoButton.style.top = randTop + "px";
+        naoButton.style.left = randLeft + "px";
+      };
+
+      naoButton.addEventListener("click", handleNao);
+      naoButton.addEventListener("mouseover", handleNao);
+    });
+  </script>
 </html>
